@@ -1,6 +1,10 @@
 import { useState } from "react";
 import Button from "../components/ui/Button";
-import { submitNetlifyForm } from "../utils/netlifyForms";
+import {
+  submitToNetlifyForms,
+  notifyNetlifyFunction,
+} from "../utils/netlifyForms";
+
 
 const fieldClassName =
   "w-full rounded-xl border border-[#0B1F4A]/15 bg-white px-4 py-3 text-sm text-[#0B1F4A] shadow-sm outline-none transition-all duration-300 placeholder:text-[#0B1F4A]/35 hover:border-[#15589D]/45 focus:border-[#F4B400] focus:ring-4 focus:ring-[#F4B400]/15 sm:px-5 sm:py-4 sm:text-base";
@@ -20,16 +24,25 @@ function JoinTeamPage() {
     setError("");
 
     try {
-      await submitNetlifyForm(form);
-      form.reset();
-      setEnviado(true);
-    } catch {
-      setError(
-        "No pudimos enviar tu postulación. Inténtalo de nuevo en unos momentos.",
-      );
-    } finally {
-      setEnviando(false);
-    }
+  // 1. Primero enviamos datos + PDF directamente a Netlify Forms.
+  //    El archivo NO pasa por la Netlify Function.
+  await submitToNetlifyForms(form);
+
+  // 2. Después enviamos solamente los datos de texto a la Function.
+  //    Esta petición es pequeña y no produce el error 413.
+  await notifyNetlifyFunction(form);
+
+  form.reset();
+  setEnviado(true);
+} catch (error) {
+  console.error("Error enviando postulación:", error);
+
+  setError(
+    "No pudimos enviar tu postulación. Inténtalo de nuevo en unos momentos.",
+  );
+} finally {
+  setEnviando(false);
+}
   };
 
   return (

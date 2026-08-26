@@ -199,8 +199,36 @@ export async function handler(event) {
     return jsonResponse(405, { ok: false, error: "Método no permitido." });
   }
 
-  const { fields, file } = parseMultipartAll(event);
-  const formName = fields["form-name"];
+  let fields = {};
+let file = null;
+
+const contentType =
+  event.headers["content-type"] ||
+  event.headers["Content-Type"] ||
+  "";
+
+if (contentType.includes("application/json")) {
+  try {
+    const rawBody = event.isBase64Encoded
+      ? Buffer.from(event.body || "", "base64").toString("utf8")
+      : event.body || "{}";
+
+    fields = JSON.parse(rawBody);
+  } catch (error) {
+    console.error("[submit-form] JSON inválido:", error.message);
+
+    return jsonResponse(400, {
+      ok: false,
+      error: "Datos del formulario inválidos.",
+    });
+  }
+} else {
+  const parsed = parseMultipartAll(event);
+  fields = parsed.fields;
+  file = parsed.file;
+}
+
+const formName = fields["form-name"];
 
   if (!formName || !SUPPORTED_FORMS.has(formName)) {
     return jsonResponse(400, {
@@ -273,12 +301,24 @@ export async function handler(event) {
     );
   }
 
-  // 5) Reenviar a Netlify Forms (preserva historial, adjuntos, panel)
+  // 5) Netlify Forms
+//
+// Para postulaciones laborales, el formulario completo
+// (incluyendo la hoja de vida) ya fue enviado directamente
+// desde el navegador a Netlify Forms.
+//
+// Para cotizaciones mantenemos el flujo anterior,
+// porque pueden seguir utilizando archivos desde la Function.
+
+if (formName === "cotizacion") {
   try {
     await forwardToNetlify({ formName, fields, file });
   } catch (err) {
-    console.error("[submit-form] Error reenviando a Netlify Forms:", err.message);
-    // Si el email HTML sí salió, no bloqueamos al usuario.
+    console.error(
+      "[submit-form] Error reenviando a Netlify Forms:",
+      err.message,
+    );
+
     if (emailError) {
       return jsonResponse(502, {
         ok: false,
@@ -287,6 +327,7 @@ export async function handler(event) {
       });
     }
   }
+}
 
   if (emailError) {
     return jsonResponse(502, {
