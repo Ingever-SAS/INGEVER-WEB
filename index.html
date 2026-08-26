@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ingever Asociados S.A.S. ofrece soluciones de montaje, mantenimiento y modernización de puentes grúa y sistemas de izaje industrial."
+    />
+    <meta name="theme-color" content="#0B1F4A" />
+    <title>Ingever Asociados S.A.S. | Ingeniería industrial</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- Netlify detecta estos formularios durante el build de la SPA. -->
+    <form
+      name="cotizacion"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      enctype="multipart/form-data"
+      hidden
+    >
+      <input type="hidden" name="form-name" value="cotizacion" />
+      <input name="bot-field" type="text" />
+      <input name="nombre" type="text" />
+      <input name="empresa" type="text" />
+      <input name="correo" type="email" />
+      <input name="telefono" type="tel" />
+      <select name="servicio"><option value=""></option></select>
+      <textarea name="descripcion"></textarea>
+      <input name="archivo" type="file" />
+    </form>
+
+    <form
+      name="postulacion-laboral"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      enctype="multipart/form-data"
+      hidden
+    >
+      <input type="hidden" name="form-name" value="postulacion-laboral" />
+      <input name="bot-field" type="text" />
+      <input name="nombre" type="text" />
+      <input name="cargo" type="text" />
+      <input name="correo" type="email" />
+      <input name="telefono" type="tel" />
+      <select name="area"><option value=""></option></select>
+      <textarea name="presentacion"></textarea>
+      <input name="hoja-de-vida" type="file" />
+    </form>
+
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
