@@ -1,0 +1,19 @@
+# Configuración de Netlify para Ingever Asociados S.A.S.
+#
+# - Build command y directorio de salida para el frontend React + Vite.
+# - Functions declaradas explícitamente en netlify/functions/.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[functions]
+  # Bundling por defecto de Netlify: incluye las dependencias listadas en
+  # package.json. Nodemailer (y sus dependencias) se incluyen automáticamente.
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
