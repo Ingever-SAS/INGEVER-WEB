@@ -14,6 +14,8 @@ function JoinTeamPage() {
     event.preventDefault();
     const form = event.currentTarget;
 
+    console.log("POSTULACIÓN: handleSubmit ejecutado");
+
     setEnviando(true);
     setError("");
 
