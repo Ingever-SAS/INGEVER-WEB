@@ -147,11 +147,12 @@ function ContactPage() {
                   className={fieldClassName}
                 >
                   <option value="">Selecciona un servicio</option>
-                  <option>Fabricación de Puentes Grúa</option>
                   <option>Montaje e Instalación de Puentes Grúa</option>
                   <option>Desmontaje de Puentes Grúa</option>
-                  <option>Remodelación, Reparación y Modernización de Puentes Grúa y Polipastos</option>
+                  <option>Reestructuración, Reparación y Modernización de Puentes Grúa y Polipastos</option>
                   <option>Mantenimiento Preventivo y Correctivo de Puentes Grúa y Polipastos</option>
+                  <option>Ventas De Polipastos y Puentes Grúa</option>
+                  <option>Venta de Respuesto para Puentes Grúa y Polipastos</option>
                   <option>Otro</option>
                 </select>
               </div>
