@@ -54,6 +54,7 @@ function About() {
                   Calidad certificado bajo la norma ISO 9001:2015</strong>, lo que
                 refleja nuestro compromiso con la mejora continua, la excelencia
                 operativa y la garantía en cada uno de nuestros montajes y servicios.
+                
                 <p>
                   Trabajamos para convertir cada necesidad de izaje en una solución
                   confiable, eficiente y sostenible para nuestros clientes.
