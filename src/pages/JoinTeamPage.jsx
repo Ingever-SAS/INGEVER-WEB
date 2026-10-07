@@ -165,20 +165,20 @@ function JoinTeamPage() {
                 </label>
                 <select id="area" name="area" defaultValue="" className={fieldClassName}>
                   <option value="">Selecciona un área</option>
-                  <option>Gerente General</option>
+                  {/* <option>Gerente General</option>
                   <option>Director General</option>
                   <option>Ingeniero De Operaciones</option>
                   <option>Asistente Administrativo</option>
-                  <option>Auxiliar De talentos humanos</option>
-                  <option>Inspector SST</option>
+                  <option>Auxiliar De talentos humanos</option> */}
+                  <option>Inspector SST</option> 
                   <option>Mecánico Industrial</option>
                   <option>Electricista Industrial</option>
                   <option>Electromecánico Industrial</option>
                   <option>Electrónico Industrial</option>
                   <option>Técnico Mecánico</option>
-                  <option>Técnico Electricista</option>
+                  {/* <option>Técnico Electricista</option>
                   <option>Técnico Electromecánico</option>
-                  <option>Técnico Electrónico</option>
+                  <option>Técnico Electrónico</option> */}
                   <option>Mantenimiento de automatismo industriales</option>
                 </select>
               </div>
