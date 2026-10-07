@@ -24,25 +24,25 @@ function JoinTeamPage() {
     setError("");
 
     try {
-  // 1. Primero enviamos datos + PDF directamente a Netlify Forms.
-  //    El archivo NO pasa por la Netlify Function.
-  await submitToNetlifyForms(form);
+      // 1. Primero enviamos datos + PDF directamente a Netlify Forms.
+      //    El archivo NO pasa por la Netlify Function.
+      await submitToNetlifyForms(form);
 
-  // 2. Después enviamos solamente los datos de texto a la Function.
-  //    Esta petición es pequeña y no produce el error 413.
-  await notifyNetlifyFunction(form);
+      // 2. Después enviamos solamente los datos de texto a la Function.
+      //    Esta petición es pequeña y no produce el error 413.
+      await notifyNetlifyFunction(form);
 
-  form.reset();
-  setEnviado(true);
-} catch (error) {
-  console.error("Error enviando postulación:", error);
+      form.reset();
+      setEnviado(true);
+    } catch (error) {
+      console.error("Error enviando postulación:", error);
 
-  setError(
-    "No pudimos enviar tu postulación. Inténtalo de nuevo en unos momentos.",
-  );
-} finally {
-  setEnviando(false);
-}
+      setError(
+        "No pudimos enviar tu postulación. Inténtalo de nuevo en unos momentos.",
+      );
+    } finally {
+      setEnviando(false);
+    }
   };
 
   return (
@@ -165,15 +165,21 @@ function JoinTeamPage() {
                 </label>
                 <select id="area" name="area" defaultValue="" className={fieldClassName}>
                   <option value="">Selecciona un área</option>
-                  <option>Ingeniería</option>
-                  <option>Operador de Puente Grúa</option>
-                  <option>Soldadura Industrial</option>
-                  <option>Electricidad Industrial</option>
-                  <option>Mantenimiento</option>
-                  <option>Montaje Mecánico</option>
-                  <option>Administración</option>
-                  <option>Aprendiz SENA</option>
-                  <option>Prácticas Universitarias</option>
+                  <option>Gerente General</option>
+                  <option>Director General</option>
+                  <option>Ingeniero De Operaciones</option>
+                  <option>Asistente Administrativo</option>
+                  <option>Auxiliar De talentos humanos</option>
+                  <option>Inspector SST</option>
+                  <option>Mecánico Industrial</option>
+                  <option>Electricista Industrial</option>
+                  <option>Electromecánico Industrial</option>
+                  <option>Electrónico Industrial</option>
+                  <option>Técnico Mecánico</option>
+                  <option>Técnico Electricista</option>
+                  <option>Técnico Electromecánico</option>
+                  <option>Técnico Electrónico</option>
+                  <option>Mantenimiento de automatismo industriales</option>
                 </select>
               </div>
 
