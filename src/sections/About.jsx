@@ -43,7 +43,7 @@ function About() {
               <p>
                 En <strong>Ingever Asociados S.A.S.</strong> desarrollamos soluciones
                 especializadas para el montaje, desmontaje, mantenimiento,
-                modernización y fabricación de puentes grúa, polipastos y sistemas de
+                modernización de puentes grúa, polipastos y sistemas de
                 izaje. Con <strong>14 años de experiencia</strong>, acompañamos al
                 sector industrial, minero y metalmecánico con servicios que combinan
                 experiencia técnica, seguridad y calidad en cada proyecto.
@@ -54,8 +54,11 @@ function About() {
                   Calidad certificado bajo la norma ISO 9001:2015</strong>, lo que
                 refleja nuestro compromiso con la mejora continua, la excelencia
                 operativa y la garantía en cada uno de nuestros montajes y servicios.
-                Trabajamos para convertir cada necesidad de izaje en una solución
-                confiable, eficiente y sostenible para nuestros clientes.
+                <p>
+                  Trabajamos para convertir cada necesidad de izaje en una solución
+                  confiable, eficiente y sostenible para nuestros clientes.
+                </p>
+
               </p>
             </div>
 
