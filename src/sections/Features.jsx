@@ -16,7 +16,7 @@ function Features() {
         />
 
         <p className="mx-auto mt-5 max-w-3xl text-center text-base leading-7 text-[#0B1F4A]/70 sm:mt-6 sm:text-lg sm:leading-8">
-          Nuestra experiencia, compromiso y enfoque en la seguridad nos permiten
+          Nuestra experiencia, compromiso, enfoque y seguridad nos permiten
           ofrecer soluciones confiables para cada proyecto industrial.
         </p>
 

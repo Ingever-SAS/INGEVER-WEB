@@ -370,16 +370,6 @@ export const brands = [
           "Sistemas de control y radiocontrol industrial para puentes grúa y equipos de izaje.",
         products: [
           {
-            id: "Alpha-608B",
-            name: "CONTROL REMOTO Alpha-608B",
-            category: "CONTROL REMOTO FOMOTECH",
-            description:
-              "Sistema de control por radio industrial FOMOTECH Alpha-608B para puentes grúa y equipos de elevación. Incorpora transmisor industrial de 8 botones, receptor de alta confiabilidad y funciones de seguridad para aplicaciones de servicio pesado.",
-            image: "/images/marcas/fomotech/Alpha608B.jpg",
-            imageAlt: "Imagen temporal del CONTROL REMOTO Alpha-608B",
-            pdf: "/pdfs/fomotech/Alpha608B.pdf",
-          },
-          {
             id: "PLd-CAT3",
             name: "CONTROL REMOTO PLd CAT3",
             category: "CONTROL REMOTO",

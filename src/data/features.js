@@ -25,6 +25,6 @@ export const features = [
     icon: FaUsers,
     title: "Personal Calificado",
     description:
-      "Nuestro equipo cuenta con experiencia en montaje, mantenimiento y modernización de puentes grúa.",
+      "Nuestro equipo cuenta con experiencia en montajes, mantenimientos y modernizaciónes de puentes grúa.",
   },
 ];

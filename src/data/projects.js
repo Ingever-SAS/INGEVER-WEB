@@ -271,7 +271,7 @@ export const projects = [
       "Montaje de carrileras, armado e instalación completa de un puente grúa para una represa, garantizando una puesta en servicio segura y confiable.",
 
     fullDescription:
-      "Proyecto ejecutado durante el año 2018 para el montaje de la estructura de carrileras y el armado e instalación completa de un puente grúa en una represa. La intervención incluyó el montaje de la estructura, la alineación del sistema, los ajustes finales y las pruebas de funcionamiento para garantizar una operación segura y conforme a las especificaciones del proyecto.",
+      "Proyecto ejecutado durante el año 2018 para el montaje de la estructura de vigas carrileras, armado de viga puente, instalacion de polipasto y conexiones para el buen funcionamineto del puente grúa en la compuerta de alimentacion a los generadores, . La intervención incluyó el montaje de la estructura, la alineación del sistema, los ajustes finales y las pruebas de funcionamiento para garantizar una operación segura y conforme a las especificaciones del proyecto.",
 
     heroImage: cueva1,
 
@@ -317,7 +317,7 @@ export const projects = [
 
     location: "Santa Maria - Boyaca",
 
-    year: "2018",
+    year: "2020",
 
     duration: "Por confirmar",
 
@@ -354,11 +354,11 @@ export const projects = [
       },
       {
         label: "Ubicación",
-        value: "Represa - Colombia",
+        value: "Central Hidroeléctrica de Chivor - Colombia",
       },
       {
         label: "Año",
-        value: "2018",
+        value: "2020"
       },
       {
         label: "Actividad",
